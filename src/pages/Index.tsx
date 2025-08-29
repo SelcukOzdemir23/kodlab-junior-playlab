@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code, Calculator, BookOpen, Palette } from 'lucide-react';
+import { Code, Calculator, BookOpen, Palette, Eye } from 'lucide-react';
 import { GameCard } from '../components/GameCard';
 import kodlabMascot from '../assets/kodlab-mascot.png';
 
@@ -34,10 +34,19 @@ const Index = () => {
       description: "Renkleri ve şekilleri keşfet!",
       icon: Palette,
       gradientClass: "bg-gradient-design",
-      path: "/tasarim",
+            path: "/tasarim",
       delay: 0.4
+    },
+    {
+      title: "Odak Avcısı",
+      description: "Dikkatini geliştir, görsel hafızanı test et!",
+      icon: Eye,
+      gradientClass: "bg-gradient-focus",
+      path: "/odak-avcisi",
+      delay: 0.5
     }
   ];
+
 
   return (
     <div className="min-h-screen bg-background font-fun">

@@ -84,6 +84,7 @@ export default {
 				'gradient-math': 'var(--gradient-math)',
 				'gradient-english': 'var(--gradient-english)',
 				'gradient-design': 'var(--gradient-design)',
+				'gradient-focus': 'var(--gradient-focus)',
 			},
 			boxShadow: {
 				'fun': 'var(--shadow-fun)',

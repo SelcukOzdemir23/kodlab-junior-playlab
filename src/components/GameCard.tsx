@@ -12,6 +12,9 @@ interface GameCardProps {
 }
 
 export const GameCard = ({ title, description, icon: Icon, gradientClass, path, delay }: GameCardProps) => {
+  // Odak Avcısı için özel animasyon
+  const isFocusGame = title === "Odak Avcısı";
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -29,8 +32,19 @@ export const GameCard = ({ title, description, icon: Icon, gradientClass, path, 
             whileHover={{ y: -5 }}
           >
             <motion.div
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              animate={isFocusGame ? { 
+                rotate: [0, 15, -15, 0],
+                scale: [1, 1.1, 1]
+              } : { rotate: [0, 10, -10, 0] }}
+              transition={isFocusGame ? { 
+                repeat: Infinity, 
+                duration: 3,
+                ease: "easeInOut"
+              } : { 
+                repeat: Infinity, 
+                duration: 4, 
+                ease: "easeInOut" 
+              }}
               className="inline-block mb-4"
             >
               <Icon size={48} className="mx-auto drop-shadow-lg" />
@@ -42,6 +56,17 @@ export const GameCard = ({ title, description, icon: Icon, gradientClass, path, 
             <motion.div 
               className="mt-4 inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold"
               whileHover={{ backgroundColor: "rgba(255,255,255,0.3)" }}
+              animate={isFocusGame ? {
+                boxShadow: [
+                  "0 0 0px rgba(255,255,255,0.3)",
+                  "0 0 20px rgba(255,255,255,0.6)",
+                  "0 0 0px rgba(255,255,255,0.3)"
+                ]
+              } : {}}
+              transition={isFocusGame ? {
+                repeat: Infinity,
+                duration: 2
+              } : {}}
             >
               Oynamaya Başla! 🎮
             </motion.div>
