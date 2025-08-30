@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code, Calculator, BookOpen, Palette, Eye } from 'lucide-react';
+import { Code, Calculator, BookOpen, Palette, Eye, Droplets } from 'lucide-react';
 import { GameCard } from '../components/GameCard';
 import kodlabMascot from '../assets/kodlab-mascot.png';
 
@@ -44,6 +44,14 @@ const Index = () => {
       gradientClass: "bg-gradient-focus",
       path: "/odak-avcisi",
       delay: 0.5
+    },
+    {
+      title: "Renk Karıştırma",
+      description: "Temel renkleri karıştır, yeni tonlar oluştur!",
+      icon: Droplets,
+      gradientClass: "bg-gradient-design",
+      path: "/renk-karistirma",
+      delay: 0.6
     }
   ];
 

@@ -10,6 +10,7 @@ import MatematikOyunu from "./pages/MatematikOyunu";
 import IngilizceOyunu from "./pages/IngilizceOyunu";
 import TasarimOyunu from "./pages/TasarimOyunu";
 import OdakAvcisi from "./pages/OdakAvcisi";
+import RenkKaristirmaStudyo from "./pages/RenkKaristirmaStudyo";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/ingilizce" element={<IngilizceOyunu />} />
           <Route path="/tasarim" element={<TasarimOyunu />} />
           <Route path="/odak-avcisi" element={<OdakAvcisi />} />
+          <Route path="/renk-karistirma" element={<RenkKaristirmaStudyo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
